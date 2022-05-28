@@ -54,6 +54,11 @@ def get_content(browser: webdriver, cur_list):
             coins.append(elem)
         iter += 1
     i = 0
+    while True:
+        try:
+            coins.remove('Buy')
+        except ValueError:
+            break
     print(coins)
     while i < 10045:
         i += 1
